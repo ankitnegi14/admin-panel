@@ -1,0 +1,127 @@
+<div class="vertical-layout vertical-menu-modern 1-column  navbar-floating footer-static bg-full-screen-image  blank-page blank-page  pace-done"
+    data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
+    <div class="app-content content">
+        <div class="content-wrapper">
+            <div class="content-body">
+                <section class="row flexbox-container">
+                    <div class="col-xl-8 col-11 d-flex justify-content-center">
+                        <div class="card bg-authentication rounded-0 mb-0">
+                            <div class="row m-0">
+                                <div class="col-lg-4 d-lg-block d-none text-center align-self-center px-1 py-0">
+                                    <img src="../../assets/login-image/login-logo.jpg" alt="branding logo"
+                                        class="img-fluid" width="200px" style="margin-left: 5px;">
+                                </div>
+                                <div class="col-lg-8 col-12 p-0">
+                                    <div class="card rounded-0 mb-0 px-2">
+                                        <div class="card-header pb-1">
+                                            <div class="card-title">
+                                                <h4 class="mb-2"
+                                                    style="margin-left: 125px; font-family: 'Montserrat', Helvetica, Arial, serif;">
+                                                    Login</h4>
+                                            </div>
+                                        </div>
+                                        <p class="px-1"
+                                            style="margin-left: 45px;  font-family: 'Montserrat', Helvetica, Arial, serif;">
+                                            Please login to your account.</p>
+                                        <div class="card-content">
+                                            <div class="card-body">
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active" id="service-center"
+                                                        aria-labelledby="service-tab-center" role="tabpanel">
+                                                        <div class="card rounded-0 mb-0">
+                                                            <div class="card-content">
+                                                                <div class="card-body p-0">
+                                                                    <form [formGroup]="loginForm">
+                                                                        <fieldset
+                                                                            class="form-label-group form-group position-relative has-icon-left">
+                                                                            <!-- <input type="text" class="form-control"
+                                                                                id="user-name" formControlName="email"
+                                                                                placeholder="Email">
+                                                                            <span style="color: red;"
+                                                                                *ngIf="email && email.invalid && email.touched">email
+                                                                                is Required</span>
+                                                                            <div class="form-control-position">
+
+                                                                            </div>
+                                                                            <label for="user-name">Email</label> -->
+
+                                                                            <!-- ***************** material ui input ****************** -->
+                                                                            <div class="example-container">
+                                                                                <mat-form-field appearance="fill">
+                                                                                    <mat-label>Enter your email
+                                                                                    </mat-label>
+                                                                                    <input matInput
+                                                                                        formControlName="email"
+                                                                                        placeholder="Enter Your Email"
+                                                                                        required>
+
+                                                                                </mat-form-field>
+                                                                            </div>
+
+                                                                        </fieldset>
+                                                                        <fieldset
+                                                                            class="form-label-group position-relative has-icon-left">
+                                                                            <!-- <input type="password" class="form-control"
+                                                                                formControlName="password"
+                                                                                id="user-password"
+                                                                                placeholder="Password">
+                                                                            <span style="color: red;"
+                                                                                *ngIf="password && password.invalid && password.touched">Password
+                                                                                is Required</span>
+                                                                            <div class="form-control-position">
+
+                                                                            </div>
+                                                                            <label for="user-password">Password</label> -->
+
+
+                                                                            <!-- ***************** material ui input ****************** -->
+                                                                            <div class="example-container">
+                                                                                <mat-form-field appearance="fill">
+                                                                                    <mat-label>Enter your password
+                                                                                    </mat-label>
+                                                                                    <input matInput
+                                                                                        formControlName="password"
+                                                                                        [type]="hide ? 'password' : 'text'">
+                                                                                    <button mat-icon-button matSuffix
+                                                                                        (click)="hide = !hide"
+                                                                                        [attr.aria-label]="'Hide password'"
+                                                                                        [attr.aria-pressed]="hide">
+                                                                                        <mat-icon>{{hide ?
+                                                                                            'visibility_off' :
+                                                                                            'visibility'}}</mat-icon>
+                                                                                    </button>
+                                                                                </mat-form-field>
+                                                                            </div>
+
+                                                                        </fieldset>
+                                                                        <div
+                                                                            class="form-group d-flex justify-content-between align-items-center">
+
+                                                                            <div class="text-right"><a href="#"
+                                                                                    class="card-link">
+                                                                                    <small>Forgot
+                                                                                        Password?</small></a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <button type="submit"
+                                                                            [disabled]="loginForm.invalid"
+                                                                            class="btn btn-block float-right"
+                                                                            (click)="submitLoginForm()">Login</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
