@@ -1,0 +1,117 @@
+<!-- <div class="ms-4">Add User</div> <span class="display-inline-block"><a href="">Home</a></span>&nbsp;&nbsp;&nbsp;&nbsp;<i
+    class="fa-solid fa-angles-right"></i> -->
+
+<h1 class="ms-3">Add User &nbsp;&nbsp;<mat-icon style="font-size: 20px;" color="primary">fast_forward</mat-icon><a
+        style="font-size: 15px;" class="text-decoration-none" href="">home</a></h1>
+
+<mat-card class="card-padding card-shadow d-flex justify-content-center">
+    <mat-card-content>
+        <form [formGroup]="addUserForm">
+            <div class="row">
+                <div class="col-md-3">
+                    <mat-form-field>
+                        <mat-label>First Name</mat-label>
+                        <input matInput formControlName="firstName" placeholder="Enter Your First Name">
+                        <!-- <span style="color: red;" *ngIf="firstName && firstName.invalid && firstName.touched">Enter
+                            FirstName</span> -->
+                    </mat-form-field>
+                    <div style="color: red;" *ngIf="f.firstName.touched && f.firstName.invalid">
+                        <div *ngIf="f.firstName.errors && f.firstName.errors.required">This Field is required.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <mat-form-field>
+                        <mat-label>Last Name</mat-label>
+                        <input matInput formControlName="lastName" placeholder="Enter Your Last Name">
+                        <!-- <span style="color: red;" *ngIf="lastName && lastName.invalid && lastName.touched">Enter LastName</span> -->
+                    </mat-form-field>
+                    <div style="color: red;" *ngIf="f.lastName.touched && f.lastName.invalid">
+                        <div *ngIf="f.lastName.errors && f.lastName.errors.required">This Field is required.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <mat-form-field>
+                        <mat-label>Enter your email</mat-label>
+                        <input matInput formControlName="email" placeholder="xyz@example.com" required>
+                        <!-- <span style="color: red;" *ngIf="email && email.invalid && email.touched">Enter Valid
+                            Email</span> -->
+                    </mat-form-field>
+                    <div style="color: red;" *ngIf="f.email.touched && f.email.invalid">
+                        <div *ngIf="f.email.errors && f.email.errors.required">This Field is required.</div>
+                        <div *ngIf="f.email.errors && f.email.errors.email">Please, enter valid email address.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <mat-form-field>
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput formControlName="password" [type]="hide ? 'password' : 'text'">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <!-- <span style="color: red;" *ngIf="password && password.invalid && password.touched">Enter Password</span> -->
+                    </mat-form-field>
+                    <div style="color: red;" *ngIf="f.password.touched && f.password.invalid">
+                        <div *ngIf="f.password.errors && f.password.errors.required">This Field is required.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-3">
+                <div class="col-md-3">
+                    <mat-form-field>
+                        <input matInput formControlName="dob" [matDatepicker]="datepicker"
+                            placeholder="Enter Date of Birth">
+                        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                        <mat-datepicker #datepicker></mat-datepicker>
+                    </mat-form-field>
+                    <div style="color: red;" *ngIf="f.dob.touched && f.dob.invalid">
+                        <div *ngIf="f.dob.errors && f.dob.errors.required">This Field is required.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <mat-form-field>
+                        <mat-label>Gender</mat-label>
+                        <mat-select formControlName="gender">
+                            <mat-option value="male">Male</mat-option>
+                            <mat-option value="female">Female</mat-option>
+                        </mat-select>
+                        <!-- <span style="color: red;" *ngIf="gender && gender.invalid && gender.touched">Select Gender</span> -->
+                    </mat-form-field>
+                    <div style="color: red;" *ngIf="f.gender.touched && f.gender.invalid">
+                        <div *ngIf="f.gender.errors && f.gender.errors.required">gender is required.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <mat-form-field>
+                        <mat-label>Phone Number</mat-label>
+                        <input type="number" matInput formControlName="phoneNo" placeholder="Enter Your Phone Number">
+                        <!-- <span style="color: red;" *ngIf="phoneNo && phoneNo.invalid && phoneNo.touched">Enter Valid
+                            Phone No</span> -->
+                    </mat-form-field>
+                    <div style="color: red;" *ngIf="f.phoneNo.touched && f.phoneNo.invalid">
+                        <div *ngIf="f.phoneNo.errors && f.phoneNo.errors.required">phoneNo is required.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <mat-form-field>
+                        <mat-label>Message</mat-label>
+                        <textarea matInput formControlName="message" placeholder="Enter Your Message"></textarea>
+                        <!-- <span style="color: red;" *ngIf="message && message.invalid && message.touched">Enter Message</span> -->
+                    </mat-form-field>
+                    <div style="color: red;" *ngIf="f.message.touched && f.message.invalid">
+                        <div *ngIf="f.message.errors && f.message.errors.required">message is required.</div>
+                    </div>
+                </div>
+            </div>
+
+            <button mat-raised-button color="primary" (click)="submitAddUserForm()">Add</button>
+        </form>
+    </mat-card-content>
+</mat-card>

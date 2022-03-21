@@ -1,8 +1,0 @@
-.example-container .mat-form-field + .mat-form-field {
-  margin-left: 8px;
-}
-
-/* this padding is used to give margin to the card from top botton left right */
-.card-padding{
-  margin: 20px;
-}

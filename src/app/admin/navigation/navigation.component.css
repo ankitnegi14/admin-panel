@@ -18,3 +18,82 @@
 .icon{
   margin-left: 88%;
 }
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.grid{
+  border-radius: 10px;
+  margin: 10px;
+  width: 98%;
+}
+
+/* **************** sidebar menu links css star eg: dashboard ,add User , user List **************** */
+.list{
+  margin-top: 20px;
+  /* background-color: orangered; */
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  }
+  .text{
+    color: #fff;
+    font-size: 20px;
+  }
+/* ******************************** sidebar menu links css end ****************************** */
+
+/* router link active class */
+.active{
+  background-color: #e65100;;
+}
+
+
+/* on hover transition for menu anchor tags */
+.animate{
+  transition:  0.35s ease;
+}
+.animate:hover{
+  padding-left:10px ;
+}
+
+/* ***********************media Query for person icon************************88 */
+@media screen and (min-width:280px) {
+  .icon{
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width:360px) {
+  .icon{
+    margin-left: 120px;
+  }
+}
+@media screen and (min-width:375px) {
+  .icon{
+    margin-left: 125px;
+  }
+}
+@media screen and (min-width:375px) {
+  .icon{
+    margin-left: 150px;
+  }
+}
+@media screen and (min-width:414px) {
+  .icon{
+    margin-left: 170px;
+  }
+}
+@media screen and (min-width:540px) {
+  .icon{
+    margin-left: 280px;
+  }
+}
+@media screen and (min-width:760px) {
+  .icon{
+    margin-left: 70%;
+  }
+}
+@media screen and (min-width:1024px) {
+  .icon{
+    margin-left: 80%;
+  }
+}
